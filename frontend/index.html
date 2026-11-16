@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acesso ao Sistema | Gestão de Usuários</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-body">
+  <main class="auth-container">
+    <div class="tabs">
+      <button id="tab-login" class="tab active">Entrar</button>
+      <button id="tab-register" class="tab">Cadastrar</button>
+    </div>
+
+    <div id="feedback-box" class="alert hidden"></div>
+
+    <!-- Formulário de Login -->
+    <form id="form-login" class="form">
+      <h2>Login</h2>
+      <div class="field">
+        <label for="login-email">E-mail</label>
+        <input type="email" id="login-email" required placeholder="seu@email.com">
+      </div>
+      <div class="field">
+        <label for="login-senha">Senha</label>
+        <input type="password" id="login-senha" required placeholder="••••••">
+      </div>
+      <button type="submit" class="btn-primary">Acessar Painel</button>
+    </form>
+
+    <!-- Formulário de Cadastro -->
+    <form id="form-register" class="form hidden">
+      <h2>Criar Conta</h2>
+      <div class="field">
+        <label for="reg-nome">Nome Completo</label>
+        <input type="text" id="reg-nome" required minlength="3" placeholder="Ex: Maria Silva">
+      </div>
+      <div class="field">
+        <label for="reg-email">E-mail</label>
+        <input type="email" id="reg-email" required placeholder="maria@email.com">
+      </div>
+      <div class="field">
+        <label for="reg-cargo">Cargo</label>
+        <select id="reg-cargo">
+          <option value="Usuário">Usuário</option>
+          <option value="Administrador">Administrador</option>
+          <option value="Analista">Analista</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="reg-senha">Senha (mín. 6 caracteres)</label>
+        <input type="password" id="reg-senha" required minlength="6" placeholder="Crie uma senha">
+      </div>
+      <button type="submit" class="btn-primary">Finalizar Cadastro</button>
+    </form>
+  </main>
+
+  <script type="module" src="js/auth.js"></script>
+</body>
+</html>
